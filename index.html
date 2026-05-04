@@ -4,37 +4,15 @@
     <title>Lola's Portfolio</title>
     <style>
       body {
-        background-color: black;
+        background: linear-gradient(135deg, #0a0015, #0d0030, #000820, #0a0a0a);
         color: white;
         font-family: Arial, sans-serif;
         text-align: center;
         padding-top: 100px;
+        min-height: 100vh;
+        margin: 0;
       }
 
       h1 {
         font-size: 48px;
-      }
-
-      p {
-        font-size: 20px;
-      }
-    </style>
-  </head>
-  <body>
-    <h1 id="title"></h1>
-    <p>I'm a student passionate about science, music, athletics, and making a difference in my community.</p>
-
-    <script>
-      const text = "Hi, I'm Lola";
-      let i = 0;
-      function typeWriter() {
-        if (i < text.length) {
-          document.getElementById("title").innerHTML += text.charAt(i);
-          i++;
-          setTimeout(typeWriter, 100);
-        }
-      }
-      typeWriter();
-    </script>
-  </body>
-</html>
+        color: #e0d0ff;
