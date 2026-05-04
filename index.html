@@ -2,9 +2,39 @@
 <html>
   <head>
     <title>Lola's Portfolio</title>
+    <style>
+      body {
+        background-color: black;
+        color: white;
+        font-family: Arial, sans-serif;
+        text-align: center;
+        padding-top: 100px;
+      }
+
+      h1 {
+        font-size: 48px;
+      }
+
+      p {
+        font-size: 20px;
+      }
+    </style>
   </head>
   <body>
-    <h1>Hi, I'm Lola</h1>
+    <h1 id="title"></h1>
     <p>I'm a student passionate about science, music, athletics, and making a difference in my community.</p>
+
+    <script>
+      const text = "Hi, I'm Lola";
+      let i = 0;
+      function typeWriter() {
+        if (i < text.length) {
+          document.getElementById("title").innerHTML += text.charAt(i);
+          i++;
+          setTimeout(typeWriter, 100);
+        }
+      }
+      typeWriter();
+    </script>
   </body>
 </html>
