@@ -16,3 +16,29 @@
       h1 {
         font-size: 48px;
         color: #e0d0ff;
+      }
+
+      p {
+        font-size: 20px;
+        color: #c0b8d8;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="title"></h1>
+    <p>I'm a student passionate about science, music, athletics, and making a difference in my community.</p>
+
+    <script>
+      const text = "Hi, I'm Lola";
+      let i = 0;
+      function typeWriter() {
+        if (i < text.length) {
+          document.getElementById("title").innerHTML += text.charAt(i);
+          i++;
+          setTimeout(typeWriter, 100);
+        }
+      }
+      typeWriter();
+    </script>
+  </body>
+</html>
