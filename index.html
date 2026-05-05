@@ -1,44 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Lola's Portfolio</title>
-    <style>
-      body {
-        background: linear-gradient(135deg, #0a0015, #0d0030, #000820, #0a0a0a);
-        color: white;
-        font-family: Arial, sans-serif;
-        text-align: center;
-        padding-top: 100px;
-        min-height: 100vh;
-        margin: 0;
-      }
-
-      h1 {
-        font-size: 48px;
-        color: #e0d0ff;
-      }
-
-      p {
-        font-size: 20px;
-        color: #c0b8d8;
-      }
-    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <title>Portfolio</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script type="module" crossorigin src="/assets/index-UcM-Pgs3.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-wXNPvByT.css">
   </head>
   <body>
-    <h1 id="title"></h1>
-    <p>I'm a student passionate about science, music, athletics, and making a difference in my community.</p>
-
-    <script>
-      const text = "Hi, I'm Lola";
-      let i = 0;
-      function typeWriter() {
-        if (i < text.length) {
-          document.getElementById("title").innerHTML += text.charAt(i);
-          i++;
-          setTimeout(typeWriter, 100);
-        }
-      }
-      typeWriter();
-    </script>
+    <div id="root"></div>
   </body>
 </html>
