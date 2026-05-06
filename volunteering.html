@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Volunteering — Lola Lavin</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Jost:wght@200;300;400&display=swap" rel="stylesheet">
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{min-height:100vh;background:radial-gradient(ellipse at 20% 50%,#1a0533 0%,#000510 40%,#00001a 70%,#050005 100%);color:#e8e0f0;font-family:"Jost",sans-serif;font-weight:300;}
+    canvas{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:0;}
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:center;flex-wrap:wrap;gap:2px;padding:16px;background:linear-gradient(to bottom,rgba(0,0,10,0.97),transparent);}
+    nav a{color:#a090c0;text-decoration:none;font-family:"Jost",sans-serif;font-weight:200;font-size:12px;letter-spacing:2px;text-transform:uppercase;padding:6px 14px;border:1px solid transparent;border-radius:20px;transition:all 0.3s ease;}
+    nav a:hover,nav a.active{color:#d4beff;border-color:rgba(180,140,255,0.3);background:rgba(120,80,200,0.1);}
+    .page{position:relative;z-index:1;min-height:100vh;padding:130px 40px 80px;max-width:900px;margin:0 auto;}
+    .page-label{font-size:11px;letter-spacing:4px;text-transform:uppercase;color:#7060a0;margin-bottom:16px;text-align:center;}
+    h1{font-family:"Cormorant Garamond",serif;font-weight:300;font-size:clamp(42px,8vw,80px);color:#f0eaff;line-height:1.05;margin-bottom:16px;text-align:center;}
+    .divider{width:60px;height:1px;background:linear-gradient(to right,transparent,#7050c0,transparent);margin:0 auto 50px;}
+    .subtitle{font-size:16px;color:#9080b0;line-height:1.9;text-align:center;margin-bottom:50px;}
+    .event-box{border:1px solid rgba(150,100,255,0.2);border-radius:12px;padding:28px;background:rgba(60,30,100,0.1);margin-bottom:20px;display:flex;gap:24px;align-items:flex-start;flex-wrap:wrap;transition:all 0.3s ease;}
+    .event-box:hover{border-color:rgba(180,140,255,0.35);background:rgba(80,40,130,0.15);}
+    .event-box img{width:150px;height:150px;object-fit:cover;border-radius:8px;flex-shrink:0;}
+    .event-text h3{font-family:"Cormorant Garamond",serif;font-size:24px;color:#d4beff;margin-bottom:8px;}
+    .event-text p{font-size:14px;color:#8070a0;line-height:1.7;}
+    .card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-top:40px;}
+    .card{border:1px solid rgba(150,100,255,0.15);border-radius:12px;padding:22px;background:rgba(60,30,100,0.1);transition:all 0.3s ease;}
+    .card:hover{border-color:rgba(180,140,255,0.35);background:rgba(80,40,130,0.2);transform:translateY(-3px);}
+    .card-icon{font-size:24px;margin-bottom:10px;}
+    .card h3{font-family:"Cormorant Garamond",serif;font-weight:400;font-size:18px;color:#d4beff;margin-bottom:6px;}
+    .card p{font-size:13px;color:#8070a0;line-height:1.6;}
+    .section-title{font-family:"Cormorant Garamond",serif;font-size:28px;color:#c0a8e8;margin-bottom:24px;margin-top:10px;}
+  </style>
+</head>
+<body>
+  <canvas id="stars"></canvas>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="music.html">Music</a>
+    <a href="athletics.html">Athletics</a>
+    <a href="volunteering.html" class="active">Volunteering</a>
+    <a href="commitments.html">Commitments</a>
+    <a href="stem.html">STEM</a>
+    <a href="wpga.html">WPGA</a>
+  </nav>
+  <div class="page">
+    <p class="page-label">Lola Estelle Lavin</p>
+    <h1>Volunteering</h1>
+    <div class="divider"></div>
+    <p class="subtitle">Giving back through hands-on service — from summer camps to botanical gardens, literary events to environmental cleanups.</p>
+
+    <h2 class="section-title">Featured</h2>
+
+    <div class="event-box">
+      <img src="Camp_Jubilee_Kayak_2024.jpg" alt="Camp Jubilee">
+      <div class="event-text">
+        <h3>Camp Jubilee</h3>
+        <p>Work weekends for 2+ years. Served as LIT (Leader in Training) in 2024, then CIT (Counsellor in Training) with full Practicum in 2025 — mentoring younger campers and leading activities in an outdoor residential camp setting.</p>
+      </div>
+    </div>
+
+    <div class="event-box">
+      <img src="Volunteering_Aug_2025.jpg" alt="Christianne's Lyceum">
+      <div class="event-text">
+        <h3>Christianne's Lyceum of Literature & Art</h3>
+        <p>Provided childcare and assisted with event setup at this beloved Vancouver literary and arts space, helping create enriching experiences for young readers and their families.</p>
+      </div>
+    </div>
+
+    <div class="event-box">
+      <img src="Volunteer_Apple_Fest6_2025.png" alt="UBC Apple Festival 2025">
+      <div class="event-text">
+        <h3>UBC Botanical Garden — Apple Festival</h3>
+        <p>Volunteered at the UBC Botanical Garden's Apple Festival 2025, one of Vancouver's most beloved annual community events celebrating local heritage apple varieties.</p>
+      </div>
+    </div>
+
+    <div class="event-box">
+      <img src="Music_in_the_Park.jpg" alt="Music in the Park">
+      <div class="event-text">
+        <h3>Music in the Park — Dunbar Community Centre</h3>
+        <p>Performed and volunteered at this free children's community event on August 24, 2025 (11am–2pm), featuring live entertainment, arts & crafts, and family activities.</p>
+      </div>
+    </div>
+
+    <h2 class="section-title">Additional Service</h2>
+    <div class="card-grid">
+      <div class="card"><div class="card-icon">🎭</div><h3>Norman Rothstein Theatre</h3><p>Volunteered at performances and events at this prominent Vancouver arts venue.</p></div>
+      <div class="card"><div class="card-icon">🐾</div><h3>SPCA</h3><p>Animal care and community support for the BC SPCA.</p></div>
+      <div class="card"><div class="card-icon">🍀</div><h3>Girl Guides of Canada</h3><p>Active member contributing to community service initiatives through Guiding.</p></div>
+      <div class="card"><div class="card-icon">🌊</div><h3>Great Canadian Shoreline Cleanup</h3><p>Environmental stewardship through shoreline restoration and cleanup efforts.</p></div>
+      <div class="card"><div class="card-icon">🌿</div><h3>David Suzuki Foundation / Earth Rangers</h3><p>Youth environmental advocacy and conservation awareness initiatives.</p></div>
+    </div>
+  </div>
+  <script>
+    const c=document.getElementById("stars"),ctx=c.getContext("2d");let stars=[];
+    function resize(){c.width=innerWidth;c.height=innerHeight;}
+    function init(){stars=[];for(let i=0;i<200;i++)stars.push({x:Math.random()*c.width,y:Math.random()*c.height,r:Math.random()*1.2,o:Math.random(),s:Math.random()*0.005+0.001});}
+    function draw(){ctx.clearRect(0,0,c.width,c.height);stars.forEach(s=>{s.o+=s.s;if(s.o>1||s.o<0)s.s*=-1;ctx.beginPath();ctx.arc(s.x,s.y,s.r,0,Math.PI*2);ctx.fillStyle=`rgba(220,200,255,${s.o})`;ctx.fill();});requestAnimationFrame(draw);}
+    resize();init();draw();window.addEventListener("resize",()=>{resize();init();});
+  </script>
+</body>
+</html>

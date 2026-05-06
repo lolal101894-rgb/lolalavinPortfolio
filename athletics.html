@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Athletics — Lola Lavin</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Jost:wght@200;300;400&display=swap" rel="stylesheet">
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{min-height:100vh;background:radial-gradient(ellipse at 20% 50%,#1a0533 0%,#000510 40%,#00001a 70%,#050005 100%);color:#e8e0f0;font-family:"Jost",sans-serif;font-weight:300;}
+    canvas{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:0;}
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:center;flex-wrap:wrap;gap:2px;padding:16px;background:linear-gradient(to bottom,rgba(0,0,10,0.97),transparent);}
+    nav a{color:#a090c0;text-decoration:none;font-family:"Jost",sans-serif;font-weight:200;font-size:12px;letter-spacing:2px;text-transform:uppercase;padding:6px 14px;border:1px solid transparent;border-radius:20px;transition:all 0.3s ease;}
+    nav a:hover,nav a.active{color:#d4beff;border-color:rgba(180,140,255,0.3);background:rgba(120,80,200,0.1);}
+    .page{position:relative;z-index:1;min-height:100vh;padding:130px 40px 80px;max-width:900px;margin:0 auto;}
+    .page-label{font-size:11px;letter-spacing:4px;text-transform:uppercase;color:#7060a0;margin-bottom:16px;text-align:center;}
+    h1{font-family:"Cormorant Garamond",serif;font-weight:300;font-size:clamp(42px,8vw,80px);color:#f0eaff;line-height:1.05;margin-bottom:16px;text-align:center;}
+    .divider{width:60px;height:1px;background:linear-gradient(to right,transparent,#7050c0,transparent);margin:0 auto 50px;}
+    .subtitle{font-size:16px;color:#9080b0;line-height:1.9;text-align:center;margin-bottom:50px;}
+    .photo-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:50px;}
+    .photo-row img{width:100%;height:280px;object-fit:cover;border-radius:12px;border:1px solid rgba(150,100,255,0.15);}
+    .photo-caption{font-size:12px;color:#6050a0;letter-spacing:1px;text-align:center;margin-top:8px;}
+    .card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;}
+    .card{border:1px solid rgba(150,100,255,0.15);border-radius:12px;padding:28px;background:rgba(60,30,100,0.1);backdrop-filter:blur(10px);transition:all 0.3s ease;}
+    .card:hover{border-color:rgba(180,140,255,0.35);background:rgba(80,40,130,0.2);transform:translateY(-3px);}
+    .card-icon{font-size:28px;margin-bottom:14px;}
+    .card h3{font-family:"Cormorant Garamond",serif;font-weight:400;font-size:22px;color:#d4beff;margin-bottom:10px;}
+    .card p{font-size:14px;color:#8070a0;line-height:1.7;}
+  </style>
+</head>
+<body>
+  <canvas id="stars"></canvas>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="music.html">Music</a>
+    <a href="athletics.html" class="active">Athletics</a>
+    <a href="volunteering.html">Volunteering</a>
+    <a href="commitments.html">Commitments</a>
+    <a href="stem.html">STEM</a>
+    <a href="wpga.html">WPGA</a>
+  </nav>
+  <div class="page">
+    <p class="page-label">Lola Estelle Lavin</p>
+    <h1>Athletics</h1>
+    <div class="divider"></div>
+    <p class="subtitle">Discipline, endurance, and a love of movement — from the dojo to the water, Lola competes and trains across a wide range of sports.</p>
+
+    <div class="photo-row">
+      <div>
+        <img src="Camp_Jubilee_high_ropes_2023.jpg" alt="High Ropes at Camp Jubilee 2023">
+        <p class="photo-caption">High Ropes · Camp Jubilee 2023</p>
+      </div>
+      <div>
+        <img src="Camp_Jubilee_Kayak_2024.jpg" alt="Kayaking at Camp Jubilee 2024">
+        <p class="photo-caption">Kayaking · Camp Jubilee 2024</p>
+      </div>
+    </div>
+
+    <div class="card-grid">
+      <div class="card">
+        <div class="card-icon">🥋</div>
+        <h3>Kickboxing & Jujitsu</h3>
+        <p>4+ years of training at Ken Shin Dojo. Recently tested for Red Stripe belt — a testament to consistent dedication and discipline.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🏃</div>
+        <h3>Track & Field</h3>
+        <p>3 years competing in Track & Field at WPGA. Also runs independently, maintaining fitness and building endurance year-round.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🌲</div>
+        <h3>Cross Country</h3>
+        <p>2 years of Cross Country running at WPGA, embracing the challenge of terrain and distance in competitive school events.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">⛵</div>
+        <h3>Mac Sailing</h3>
+        <p>Completed Optimist Level 1 sailing in 2023 — an introduction to the water and wind that sparked a love for being on the ocean.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🧗</div>
+        <h3>Rock Climbing</h3>
+        <p>Active member of the Rock Climbing Club, developing strength, problem-solving, and confidence on the wall.</p>
+      </div>
+    </div>
+  </div>
+  <script>
+    const c=document.getElementById("stars"),ctx=c.getContext("2d");let stars=[];
+    function resize(){c.width=innerWidth;c.height=innerHeight;}
+    function init(){stars=[];for(let i=0;i<200;i++)stars.push({x:Math.random()*c.width,y:Math.random()*c.height,r:Math.random()*1.2,o:Math.random(),s:Math.random()*0.005+0.001});}
+    function draw(){ctx.clearRect(0,0,c.width,c.height);stars.forEach(s=>{s.o+=s.s;if(s.o>1||s.o<0)s.s*=-1;ctx.beginPath();ctx.arc(s.x,s.y,s.r,0,Math.PI*2);ctx.fillStyle=`rgba(220,200,255,${s.o})`;ctx.fill();});requestAnimationFrame(draw);}
+    resize();init();draw();window.addEventListener("resize",()=>{resize();init();});
+  </script>
+</body>
+</html>
