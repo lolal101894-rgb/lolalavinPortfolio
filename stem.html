@@ -9,28 +9,28 @@
     *{margin:0;padding:0;box-sizing:border-box;}
     body{min-height:100vh;background:radial-gradient(ellipse at 20% 50%,#1a0533 0%,#000510 40%,#00001a 70%,#050005 100%);color:#e8e0f0;font-family:"Jost",sans-serif;font-weight:300;}
     canvas{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:0;}
-    nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:center;flex-wrap:wrap;gap:2px;padding:16px;background:linear-gradient(to bottom,rgba(0,0,10,0.97),transparent);}
-    nav a{color:#a090c0;text-decoration:none;font-family:"Jost",sans-serif;font-weight:200;font-size:12px;letter-spacing:2px;text-transform:uppercase;padding:6px 14px;border:1px solid transparent;border-radius:20px;transition:all 0.3s ease;}
-    nav a:hover,nav a.active{color:#d4beff;border-color:rgba(180,140,255,0.3);background:rgba(120,80,200,0.1);}
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:center;flex-wrap:wrap;gap:4px;padding:18px;background:linear-gradient(to bottom,rgba(0,0,10,0.97),transparent);}
+    nav a{color:#c0b0e0;text-decoration:none;font-family:"Jost",sans-serif;font-weight:300;font-size:14px;letter-spacing:2px;text-transform:uppercase;padding:8px 18px;border:1px solid transparent;border-radius:20px;transition:all 0.3s ease;}
+    nav a:hover,nav a.active{color:#f0e0ff;border-color:rgba(180,140,255,0.5);background:rgba(120,80,200,0.2);}
     .page{position:relative;z-index:1;min-height:100vh;padding:130px 40px 80px;max-width:900px;margin:0 auto;}
-    .page-label{font-size:11px;letter-spacing:4px;text-transform:uppercase;color:#7060a0;margin-bottom:16px;text-align:center;}
-    h1{font-family:"Cormorant Garamond",serif;font-weight:300;font-size:clamp(42px,8vw,80px);color:#f0eaff;line-height:1.05;margin-bottom:16px;text-align:center;}
+    .page-label{font-size:13px;letter-spacing:4px;text-transform:uppercase;color:#9080c0;margin-bottom:16px;text-align:center;}
+    h1{font-family:"Cormorant Garamond",serif;font-weight:300;font-size:clamp(48px,8vw,80px);color:#f0eaff;line-height:1.05;margin-bottom:16px;text-align:center;}
     .divider{width:60px;height:1px;background:linear-gradient(to right,transparent,#7050c0,transparent);margin:0 auto 50px;}
-    .subtitle{font-size:16px;color:#9080b0;line-height:1.9;text-align:center;margin-bottom:50px;}
+    .subtitle{font-size:18px;color:#a090c0;line-height:1.9;text-align:center;margin-bottom:50px;}
     .event-box{border:1px solid rgba(150,100,255,0.2);border-radius:12px;padding:28px;background:rgba(60,30,100,0.1);margin-bottom:20px;display:flex;gap:24px;align-items:flex-start;flex-wrap:wrap;transition:all 0.3s ease;}
     .event-box:hover{border-color:rgba(180,140,255,0.35);background:rgba(80,40,130,0.15);}
     .event-box img{width:160px;height:160px;object-fit:cover;border-radius:8px;flex-shrink:0;}
-    .event-text h3{font-family:"Cormorant Garamond",serif;font-size:24px;color:#d4beff;margin-bottom:8px;}
-    .event-text p{font-size:14px;color:#8070a0;line-height:1.7;}
+    .event-text h3{font-family:"Cormorant Garamond",serif;font-size:26px;color:#d4beff;margin-bottom:10px;}
+    .event-text p{font-size:16px;color:#9080b0;line-height:1.8;}
     .card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:40px;}
     .card{border:1px solid rgba(150,100,255,0.15);border-radius:12px;padding:24px;background:rgba(60,30,100,0.1);transition:all 0.3s ease;}
     .card:hover{border-color:rgba(180,140,255,0.35);background:rgba(80,40,130,0.2);transform:translateY(-3px);}
-    .card-icon{font-size:24px;margin-bottom:10px;}
-    .card h3{font-family:"Cormorant Garamond",serif;font-weight:400;font-size:19px;color:#d4beff;margin-bottom:8px;}
-    .card p{font-size:13px;color:#8070a0;line-height:1.6;}
-    .section-title{font-family:"Cormorant Garamond",serif;font-size:28px;color:#c0a8e8;margin-bottom:24px;margin-top:10px;}
-    .badge{display:inline-block;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#9070d0;border:1px solid rgba(140,90,220,0.3);border-radius:20px;padding:3px 10px;margin-bottom:10px;}
-    .medal-badge{display:inline-block;font-size:13px;color:#f0c060;border:1px solid rgba(240,190,80,0.3);border-radius:20px;padding:4px 14px;margin-bottom:10px;background:rgba(240,190,80,0.07);}
+    .card-icon{font-size:26px;margin-bottom:12px;}
+    .card h3{font-family:"Cormorant Garamond",serif;font-weight:400;font-size:21px;color:#d4beff;margin-bottom:8px;}
+    .card p{font-size:15px;color:#9080b0;line-height:1.6;}
+    .section-title{font-family:"Cormorant Garamond",serif;font-size:32px;color:#d0b8f0;margin-bottom:24px;margin-top:10px;}
+    .badge{display:inline-block;font-size:12px;letter-spacing:1px;text-transform:uppercase;color:#9070d0;border:1px solid rgba(140,90,220,0.3);border-radius:20px;padding:4px 12px;margin-bottom:10px;}
+    .medal-badge{display:inline-block;font-size:14px;color:#f0c060;border:1px solid rgba(240,190,80,0.3);border-radius:20px;padding:5px 16px;margin-bottom:10px;background:rgba(240,190,80,0.07);}
   </style>
 </head>
 <body>
@@ -66,7 +66,7 @@
       <div class="event-text">
         <span class="medal-badge">🥉 3rd Place — Buoyancy Lab</span>
         <h3>Physics Olympics — UBC</h3>
-        <p>Competed in the UBC Physics Olympics in two events. Built a pole climber device with a Grade 12 partner, and achieved 3rd place in the Buoyancy Lab challenge with her group. A standout performance in a highly competitive field of students from across BC.</p>
+        <p>Competed in the UBC Physics Olympics in two events. Built a pole climber device with a Grade 12 partner, and achieved 3rd place in the Buoyancy Lab challenge with her group — a standout performance in a highly competitive field of students from across BC.</p>
       </div>
     </div>
 
@@ -98,7 +98,7 @@
       <div class="card">
         <div class="card-icon">📐</div>
         <h3>Strategic Math / Math Potentials</h3>
-        <p>Completed the Math Potentials program at UBC in August 2024, strengthening advanced mathematical reasoning and problem-solving.</p>
+        <p>Completed the Math Potentials enrichment program at UBC in August 2024, strengthening advanced mathematical reasoning and problem-solving.</p>
       </div>
       <div class="card">
         <div class="card-icon">🏆</div>
