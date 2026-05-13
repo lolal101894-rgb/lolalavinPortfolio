@@ -12,11 +12,30 @@
     nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:center;flex-wrap:wrap;gap:4px;padding:18px;background:linear-gradient(to bottom,rgba(0,0,10,0.97),transparent);}
     nav a{color:#c0b0e0;text-decoration:none;font-family:"Jost",sans-serif;font-weight:600;font-size:14px;letter-spacing:2px;text-transform:uppercase;padding:8px 18px;border:1px solid transparent;border-radius:20px;transition:all 0.3s ease;}
     nav a:hover,nav a.active{color:#f0e0ff;border-color:rgba(180,140,255,0.5);background:rgba(120,80,200,0.2);}
-    .page{position:relative;z-index:1;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:120px 40px 80px;max-width:900px;margin:0 auto;text-align:center;}
-    .page-label{font-size:13px;letter-spacing:4px;text-transform:uppercase;color:#9080c0;margin-bottom:16px;}
-    h1{font-family:"Cormorant Garamond",serif;font-weight:300;font-size:clamp(48px,8vw,80px);color:#f0eaff;line-height:1.05;margin-bottom:24px;}
-    .divider{width:60px;height:1px;background:linear-gradient(to right,transparent,#7050c0,transparent);margin:0 auto 40px;}
-    .coming-soon{font-size:18px;color:#7060a0;line-height:1.9;}
+    .page{position:relative;z-index:1;min-height:100vh;padding:130px 40px 80px;max-width:900px;margin:0 auto;}
+    .page-label{font-size:13px;letter-spacing:4px;text-transform:uppercase;color:#9080c0;margin-bottom:16px;text-align:center;}
+    h1{font-family:"Cormorant Garamond",serif;font-weight:300;font-size:clamp(48px,8vw,80px);color:#f0eaff;line-height:1.05;margin-bottom:16px;text-align:center;}
+    .divider{width:60px;height:1px;background:linear-gradient(to right,transparent,#7050c0,transparent);margin:0 auto 50px;}
+    .subtitle{font-size:18px;color:#a090c0;line-height:1.9;text-align:center;margin-bottom:50px;}
+    .project-card{border:1px solid rgba(150,100,255,0.2);border-radius:12px;padding:36px;background:rgba(60,30,100,0.1);margin-bottom:30px;transition:all 0.3s ease;}
+    .project-card:hover{border-color:rgba(180,140,255,0.35);background:rgba(80,40,130,0.15);}
+    .project-tag{display:inline-block;font-size:12px;letter-spacing:1px;text-transform:uppercase;color:#9070d0;border:1px solid rgba(140,90,220,0.3);border-radius:20px;padding:4px 12px;margin-bottom:16px;}
+    .project-card h2{font-family:"Cormorant Garamond",serif;font-size:32px;color:#d4beff;margin-bottom:16px;}
+    .project-card p{font-size:16px;color:#9080b0;line-height:1.9;margin-bottom:16px;}
+    .stat-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:16px;margin:28px 0;}
+    .stat{border:1px solid rgba(150,100,255,0.15);border-radius:10px;padding:20px;text-align:center;background:rgba(40,20,80,0.12);}
+    .stat-number{font-family:"Cormorant Garamond",serif;font-size:36px;color:#d4beff;margin-bottom:4px;}
+    .stat-label{font-size:13px;color:#7060a0;letter-spacing:1px;}
+    .section-title{font-family:"Cormorant Garamond",serif;font-size:22px;color:#c0a8e8;margin-bottom:12px;margin-top:28px;}
+    .steps{list-style:none;padding:0;}
+    .steps li{font-size:15px;color:#9080b0;line-height:1.8;padding:10px 0;border-bottom:1px solid rgba(150,100,255,0.08);padding-left:20px;position:relative;}
+    .steps li::before{content:"→";position:absolute;left:0;color:#7050c0;}
+    .takeaway-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:16px;}
+    .takeaway{border:1px solid rgba(150,100,255,0.15);border-radius:10px;padding:20px;background:rgba(40,20,80,0.1);}
+    .takeaway h4{font-family:"Cormorant Garamond",serif;font-size:18px;color:#d4beff;margin-bottom:8px;}
+    .takeaway p{font-size:14px;color:#8070a0;line-height:1.6;}
+    .data-link{display:inline-block;margin-top:24px;color:#b090f0;font-size:14px;letter-spacing:1px;border:1px solid rgba(150,100,255,0.3);border-radius:20px;padding:10px 22px;text-decoration:none;transition:all 0.3s ease;}
+    .data-link:hover{background:rgba(100,60,180,0.2);border-color:rgba(180,140,255,0.5);}
   </style>
 </head>
 <body>
@@ -35,7 +54,40 @@
     <p class="page-label">Lola Estelle Lavin</p>
     <h1>Science Innovations</h1>
     <div class="divider"></div>
-    <p class="coming-soon">Coming soon — self-conducted science projects and experiments.</p>
+    <p class="subtitle">Self-conducted research and experiments exploring the frontiers of technology, machine learning, and real-world scientific questions.</p>
+
+    <div class="project-card">
+      <span class="project-tag">Machine Learning · AI · Computer Vision</span>
+      <h2>Evaluating Accuracy and Bias in Machine Learning Models</h2>
+      <p>A self-directed research project investigating how AI models learn to recognise road signs — and where they fail. Using Google's Teachable Machine platform, Lola trained a neural network on road sign images and then stress-tested it with 26 images the model had never seen before, including blurry shots, distant signs, and busy urban backgrounds.</p>
+
+      <div class="stat-row">
+        <div class="stat"><div class="stat-number">26</div><div class="stat-label">Tests Conducted</div></div>
+        <div class="stat"><div class="stat-number">24</div><div class="stat-label">Successes</div></div>
+        <div class="stat"><div class="stat-number">92.3%</div><div class="stat-label">Final Accuracy</div></div>
+        <div class="stat"><div class="stat-number">2</div><div class="stat-label">Failures</div></div>
+      </div>
+
+      <h3 class="section-title">What I Did</h3>
+      <ul class="steps">
+        <li>Selected two road sign classes with distinct shapes and colours: Stop signs (octagon, red) vs. Curve signs (diamond, yellow)</li>
+        <li>Trained a neural network using Google's Teachable Machine with 13 images per class as a baseline</li>
+        <li>Stress-tested the model with 26 unseen "edge case" images — blurry, distant, and set against complex backgrounds</li>
+        <li>Recorded the model's prediction and confidence level for every single image to identify success and failure patterns</li>
+      </ul>
+
+      <h3 class="section-title">What I Found</h3>
+      <p>The model achieved 92.3% accuracy — but the failures were revealing. In one test, the AI was 100% confident that a blurry Stop Sign was a Curve Sign. This highlighted a key danger: AI can be "confidently wrong." The project also revealed how bias enters machine learning when training data isn't diverse enough — a model trained only on dark images becomes blind to signs in bright light.</p>
+
+      <h3 class="section-title">Real-World Implications</h3>
+      <div class="takeaway-grid">
+        <div class="takeaway"><h4>Self-Driving Cars</h4><p>Real autonomous vehicles require 99.9999% accuracy ("six nines") — our 92.3% would cause accidents daily.</p></div>
+        <div class="takeaway"><h4>Sensor Fusion</h4><p>Real cars solve camera blur using LiDAR, Radar, and HD Maps as redundant checks — no single sensor is trusted alone.</p></div>
+        <div class="takeaway"><h4>AI Bias</h4><p>Diverse training data is essential. A model that only sees one type of image fails to generalise to the real world.</p></div>
+      </div>
+
+      <a href="https://docs.google.com/spreadsheets/d/1EsAdqQ4-PpnTxAYSzhV9TRH_uQj-gQsJFsVz7lgkMIw/edit" target="_blank" class="data-link">📊 View Full Data Analysis →</a>
+    </div>
   </div>
   <script>
     const c=document.getElementById("stars"),ctx=c.getContext("2d");let stars=[];
